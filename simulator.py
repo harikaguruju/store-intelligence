@@ -2,7 +2,7 @@ import requests
 import time
 import random
 
-API = "http://127.0.0.1:8000"
+API = "https://store-intelligence-j9m8.onrender.com"
 
 while True:
     event = {
