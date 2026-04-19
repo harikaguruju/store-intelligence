@@ -80,7 +80,7 @@ https://store-intelligence-j9m8.onrender.com
 
 https://store-intelligence-j9m8.onrender.com/docs
 
-## ## 🧪 Sample Test
+## 🧪 Sample Test
 
 Use Swagger Docs to test:
 
