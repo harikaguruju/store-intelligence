@@ -70,3 +70,12 @@ python simulator.py
 ```
 python dashboard.py
 ```
+## 🌐 Live API (Deployed)
+
+👉 Access the deployed API here:
+
+https://store-intelligence-j9m8.onrender.com
+
+👉 Swagger UI (Test all APIs):
+
+https://store-intelligence-j9m8.onrender.com/docs
