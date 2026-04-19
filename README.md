@@ -79,3 +79,17 @@ https://store-intelligence-j9m8.onrender.com
 👉 Swagger UI (Test all APIs):
 
 https://store-intelligence-j9m8.onrender.com/docs
+
+## ## 🧪 Sample Test
+
+Use Swagger Docs to test:
+
+POST /add-event
+
+Example:
+{
+  "store_id": "STORE_001",
+  "camera_id": "CAM_1",
+  "visitor_id": "V101",
+  "event_type": "ENTRY"
+}
