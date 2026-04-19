@@ -26,3 +26,39 @@ https://drive.google.com/drive/folders/1ZsEuXyD-fT6CuNzzlO9SXphI1_fzamyU?usp=dri
 ## ⚙️ Run Pipeline
 ```bash
 python pipeline/detect.py
+```
+## Run API
+```bash
+uvicorn app.main:app --reload
+API will be available at http://127.0.0.1:8000/docs
+```
+## project structure
+```
+/store-intelligence/
+├── pipeline/
+│   ├── detect.py          # Main detection + tracking script
+│   ├── tracker.py         # Re-ID / tracking logic
+│   ├── emit.py            # Event schema + emission
+│   └── run.sh             # Process all videos → events
+│
+├── app/
+│   ├── main.py            # FastAPI entrypoint
+│   ├── models.py          # Pydantic schemas
+│   ├── ingestion.py       # Event ingestion + deduplication
+│   ├── metrics.py         # Metric computations
+│   ├── funnel.py          # Funnel logic
+│   ├── anomalies.py       # Anomaly detection logic
+│   └── health.py          # Health endpoint
+│
+├── tests/
+│   ├── test_pipeline.py
+│   ├── test_metrics.py
+│   └── test_anomalies.py
+│
+├── docs/
+│   ├── DESIGN.md          # Architecture + AI decisions
+│   └── CHOICES.md         # Key design choices
+│
+├── docker-compose.yml     # Container setup
+└── README.md
+```
