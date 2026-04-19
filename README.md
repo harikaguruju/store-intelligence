@@ -62,3 +62,11 @@ API will be available at http://127.0.0.1:8000/docs
 ├── docker-compose.yml     # Container setup
 └── README.md
 ```
+## Run simulator (generate events)
+```
+python simulator.py
+```
+##  Run dashboard (live metrics)
+```
+python dashboard.py
+```
