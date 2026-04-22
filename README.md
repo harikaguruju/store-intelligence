@@ -159,17 +159,3 @@ Ctrl + C
 
 ---
 
-
-## 🧪 Sample Test
-
-Use Swagger Docs to test:
-
-POST /add-event
-
-Example:
-{
-  "store_id": "STORE_001",
-  "camera_id": "CAM_1",
-  "visitor_id": "V101",
-  "event_type": "ENTRY"
-}
