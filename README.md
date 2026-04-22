@@ -6,13 +6,16 @@ This system processes CCTV footage to detect customer movement and generate real
 ---
 
 ## 🚀 Features
-- YOLOv8 person detection
-- Entry/Exit tracking
-- Event generation (JSONL format)
-- FastAPI backend for real-time analytics
-- Metrics & funnel analysis
-- Heatmap-ready event structure
-- Anomaly detection (e.g., dead zones)
+- 🎯 YOLOv8-based person detection
+- 🚪 Entry & Exit tracking
+- 🔄 Event generation (JSONL format)
+- ⚡ FastAPI backend for real-time analytics
+- 📊 Metrics computation (visitors, conversion rate)
+- 🔽 Funnel analysis (entry → exit)
+- 📍 Heatmap-ready event structure
+- 🚨 Anomaly detection (dead zones, unusual patterns)
+- 🐳 Dockerized deployment
+
 
 ---
 
@@ -79,6 +82,83 @@ https://store-intelligence-j9m8.onrender.com
 👉 Swagger UI (Test all APIs):
 
 https://store-intelligence-j9m8.onrender.com/docs
+
+## 🐳 Docker Setup (Evaluation Requirement)
+
+This project is fully containerized using Docker.
+The API can be started with a single command.
+
+---
+
+### 🔧 Prerequisites
+
+* Install Docker Desktop
+* Ensure Docker is running
+
+---
+
+### ▶️ Run the Application
+
+```bash
+docker compose up --build
+```
+
+---
+
+### 🌐 Access the API
+
+After the container starts, open:
+
+```id="a1"
+http://localhost:8000/docs
+```
+
+👉 This will open Swagger UI where all APIs can be tested.
+
+---
+
+### 🧪 Test the API
+
+1. Open `/docs`
+2. Use **POST /add-event**
+
+Example:
+
+```json id="a2"
+{
+  "store_id": "STORE_001",
+  "camera_id": "CAM_1",
+  "visitor_id": "V101",
+  "event_type": "ENTRY"
+}
+```
+
+3. Check results in:
+
+* `/metrics`
+* `/funnel`
+
+---
+
+### 🛑 Stop the Application
+
+Press:
+
+```bash id="a3"
+Ctrl + C
+```
+
+---
+
+### 📌 Notes
+
+* No manual setup required
+* All dependencies are installed inside the container
+* The system is fully reproducible using Docker
+* Verified locally using `docker compose up --build`
+
+---
+
 
 ## 🧪 Sample Test
 
